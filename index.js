@@ -3,6 +3,7 @@
 const LeanKitClient = require('leankit-client')
 const fetch = require('node-fetch')
 const assert = require('assert')
+const moment = require('moment')
 
 const SLACK_URL = process.env.SLACK_URL
 const LEANKIT_EMAIL = process.env.LEANKIT_EMAIL
@@ -32,7 +33,7 @@ const main = async () => {
 
     const cardLinks = []
     for (let card of cards.data.cards) {
-      cardLinks.push(` • <https://${LEANKIT_ACCOUNT}.leankit.com/card/${card.id}|${card.title}>`)
+      cardLinks.push(` • <https://${LEANKIT_ACCOUNT}.leankit.com/card/${card.id}|${card.title}> (${moment(card.movedOn).toNow(true)})`)
     }
 
     let message

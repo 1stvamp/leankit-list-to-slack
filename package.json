@@ -1,6 +1,6 @@
 {
   "name": "leankit-list-to-slack",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "leankit-client": "^2.4.0",
+    "moment": "^2.24.0",
     "node-fetch": "^2.3.0"
   },
   "bin": {

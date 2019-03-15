@@ -53,8 +53,6 @@ const main = async () => {
     } else {
       message = 'No LeanKit cards *currently* on deck.'
     }
-    console.log(message)
-    process.exit(0)
     await fetch(SLACK_URL, {
         method: 'post',
         body:    JSON.stringify({text: message}),

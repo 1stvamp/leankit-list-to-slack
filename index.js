@@ -51,7 +51,7 @@ const main = async () => {
     if (cardLinks.length > 0) {
       message = `LeanKit cards in _${LEANKIT_LANE_NAME}_:\n${cardLinks.join('\n')}`
     } else {
-      message = `No LeanKit cards *currently* in _${LEANKIT_LANE_NAME}_`'
+      message = `No LeanKit cards *currently* in _${LEANKIT_LANE_NAME}_`
     }
     await fetch(SLACK_URL, {
         method: 'post',
